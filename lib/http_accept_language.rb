@@ -63,3 +63,6 @@ elsif defined?(ActionDispatch::AbstractRequest)
 elsif defined?(ActionDispatch::CgiRequest)
   ActionDispatch::CgiRequest.send :include, HttpAcceptLanguage
 end
+if defined?(ActionController::TestRequest)
+  ActionController::TestRequest.send :include, HttpAcceptLanguage
+end
